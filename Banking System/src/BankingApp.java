@@ -7,11 +7,11 @@ import java.util.Scanner;
 public class BankingApp {
     private static final String URL = "jdbc:mysql://localhost:3306/banking_system";
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "@EnterYourMysqlPassword";  // Consider using environment variables
+    private static final String PASSWORD = "@EnterYourMysqlPassword";  
 
     public static void main(String[] args) {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver"); // Ensure the driver is loaded
+            Class.forName("com.mysql.cj.jdbc.Driver"); 
         } catch (ClassNotFoundException e) {
             System.out.println("MySQL Driver not found. Make sure to add the JDBC library.");
             return;
@@ -36,7 +36,7 @@ public class BankingApp {
                     choice = scanner.nextInt();
                 } catch (InputMismatchException e) {
                     System.out.println("Invalid input! Please enter a number.");
-                    scanner.next(); // Clear buffer
+                    scanner.next(); 
                     continue;
                 }
 
